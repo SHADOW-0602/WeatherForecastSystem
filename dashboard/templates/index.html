@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Weather Forecast Dashboard</h1>
+            <div class="location-selector">
+                <form id="location-form">
+                    <input type="text" id="location-input" placeholder="Enter city or postal code" required>
+                    <button type="submit">Get Forecast</button>
+                </form>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <section class="current-weather">
+                <div class="weather-card">
+                    <h2>Current Conditions</h2>
+                    <div class="weather-display">
+                        <div class="temperature">
+                            <span id="current-temp">{{ temperature|round(1) }}</span>
+                            <span class="unit">°C</span>
+                        </div>
+                        <div id="weather-condition" class="condition {{ condition|lower|replace(' ', '-') }}">
+                            {{ condition }}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="weather-charts">
+                <div class="chart-container">
+                    <div id="temperature-chart" class="chart"></div>
+                </div>
+                <div class="chart-container">
+                    <div id="precipitation-chart" class="chart"></div>
+                </div>
+            </section>
+
+            <section class="forecast-table">
+                <h2>7-Day Forecast</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Temperature</th>
+                            <th>Conditions</th>
+                            <th>Precipitation</th>
+                        </tr>
+                    </thead>
+                    <tbody id="forecast-data">
+                        <!-- Data will be inserted by JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="dashboard-footer">
+            <p>Last updated: <span id="update-time"></span></p>
+            <p>Data source: Open-Meteo API</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
