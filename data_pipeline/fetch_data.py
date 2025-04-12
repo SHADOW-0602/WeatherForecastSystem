@@ -8,10 +8,10 @@ with open('config/api_config.yaml') as f:
 
 API_URL = config['openmeteo']['base_url']
 
-def fetch_historical_data(days=30):
+def fetch_historical_data(latitude, longitude,days=30):
     params = {
-        "latitude": config['location']['latitude'],
-        "longitude": config['location']['longitude'],
+        "latitude": latitude,
+        "longitude": longitude,
         "hourly": "temperature_2m,relative_humidity_2m,dew_point_2m,pressure_msl,cloud_cover",
         "timezone": "auto",
         "start_date": (datetime.now() - timedelta(days=days-1)).strftime('%Y-%m-%d'),
