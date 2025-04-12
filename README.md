@@ -1,7 +1,7 @@
 # WeatherForecastSystem
 A machine learning-powered weather forecasting system that predicts temperature and weather conditions using historical and real-time data from the Open-Meteo API.
 
-#Features
+## Features
 Accurate predictions of temperature and weather conditions (Clear, Rainy, Cloudy, etc.)
 
 Automated data pipeline for fetching and updating weather data
@@ -12,7 +12,7 @@ Geolocation support - enter any city or postal code
 
 Scheduled updates to keep forecasts fresh
 
-#Tech Stack
+## Tech Stack
 Python 3.8+
 
 Scikit-learn (Random Forest, Ridge Regression)
