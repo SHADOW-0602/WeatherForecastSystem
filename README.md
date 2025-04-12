@@ -27,36 +27,16 @@ Plotly for interactive visualizations
 
 Logging for error tracking
 
-#Quick Start
-1. Install dependencies
-   pip install -r requirements.txt
-2.  Run the system
-   python weather_forecast.py
-3. Follow the prompts
-Enter your location (e.g., "New York, USA" or postal code)
+## Installation
+1. Clone repository
+2. Install dependencies: `pip install -r requirements.txt`
+3. Set up configuration in `config/` files
 
-Choose a prediction date or press Enter for tomorrow's forecast
+## Usage
+- Train models: `python ml_model/train.py`
+- Run dashboard: `python dashboard/app.py`
+- Schedule updates: Configure in `data_pipeline/scheduler/`
 
-View your weather prediction!
-
-#Sample Output
-=== Weather Prediction ===
-Location: Mumbai, Maharashtra, India
-Date/Time: 2023-07-15 14:00:00
-Predicted Temperature: 32.5°C
-Predicted Conditions: Partly Cloudy
-
-Condition Probabilities:
-- Clear: 45.2%
-- Partly Cloudy: 32.1%
-- Cloudy: 12.4%
-- Light Rain: 10.3%
-
-#Contributing
-Contributions are welcome! Please open an issue or PR for:
-
-Bug fixes
-
-New features
-
-Documentation improvements
+## Requirements
+- Python 3.8+
+- See requirements.txt for dependencies
