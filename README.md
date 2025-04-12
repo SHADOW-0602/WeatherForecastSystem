@@ -13,8 +13,6 @@ Geolocation support - enter any city or postal code
 Scheduled updates to keep forecasts fresh
 
 ## Tech Stack
-Python 3.8+
-
 Scikit-learn (Random Forest, Ridge Regression)
 
 Pandas & NumPy for data processing
