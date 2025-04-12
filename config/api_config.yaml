@@ -1,0 +1,7 @@
+openmeteo:
+  base_url: "https://api.open-meteo.com/v1/forecast"
+
+# Location will be obtained via user input
+location:
+  latitude: null
+  longitude: null
